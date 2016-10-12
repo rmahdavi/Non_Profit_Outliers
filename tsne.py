@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.ensemble import IsolationForest
+from sklearn import preprocessing
 df = pd.read_csv('outlier.csv')
 #Take unwanted columns for tranformations off
 EIN = df.pop('EIN')
@@ -10,11 +11,12 @@ AS = df.pop('AS')
 outlier = df.pop('Outlier') 
 #Turn wanted observation and observations into numpy array
 X = df.values
-B = np.random.randint(51354,size=10000)
-X_sample = X[B,:]
+X_scaled = preprocessing.scale(X)
+B = np.random.randint(51354,size=3000)
+X_sample = X_scaled[B,:]
 outlier_sample  = outlier[B]
 #Fit the model multi demension space onto TSNE
-t_sne = TSNE(perplexity=100, learning_rate=10, n_iter=6000)
+t_sne = TSNE(perplexity=50, learning_rate=90, n_iter=1000)
 transformation = t_sne.fit_transform(X_sample)
 colors = outlier_sample.replace(dict(zip(outlier_sample.unique(),['b', 'r'])))
 fig = plt.figure()
