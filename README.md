@@ -1,21 +1,24 @@
 ###Non-Profit Abnonamility Test
 
-The purpose of this project is to evaluate non-profit information and identify non-profit organizations that behave abnormally from others according to a few select select financial engineered metrics.  See the following steps and procedures performed.
+####Introduction
 
-Step 1: Obtain a preliminary Sample Data Set to perform preliminary analysis of non-profit financial behaviors without engineered metrics.  See results in the link below.
 
-Step 2: Based on research on non-profit organization create a list of financial metrics to analyze of non-profit organizations and create a new data set with the sample data set and the financial metrics as parameters.  See list of Financial Metrics in the link below as well as the feature engineered data set presented.
+####Inspiration
+The inspiration for this assessment was the recent release of Non-Profit Financial Data by the IRS.
 
-Step 3: Perform EDA analysis of the feature engineered data set below.
+In June 2016 at the request of congress the IRS released parsable XML files for every nonprofit organization that files a form 990 on Amazon Web Services.
 
-Step 4: Perform a anomailty test on the sample data set and seperate outling organizations.
+A form 990 is the form that every non-profit organization is required to file in order to maintain its non-profit status it includes extensive amount of  information on non-profits Assets, Liabilities, Revenues, and Expenses.  It also includes information such as expenses on indoor tanning if your interested.
 
-Step 5: Perform EDA analysis on on the outling organizations sample.
+See the first link below for an example of the form 990 non profits file, second link for an example of the 990 XML files available, and the third link for information for how to pull the files off AWS.
 
-Step 6: Reperform anomality test until seen fit.
+[Form990_File](Form_990Duke.pdf)
 
-Step 7: Create anomaility population of all types using Amazon Web Services.
+[Form990_XML](990sample.xml)
 
-Step 8: Perform EDA Procedures
+[AWS_Link](https://aws.amazon.com/public-datasets/irs-990/)
 
-Step 9: Create visualization and make inferences of the abnormal populations. 
+
+
+
+
