@@ -1,10 +1,11 @@
 ###Abnormality in Non-Profit Financial Data 
+
 ####Introduction
 Lets assume your a person that wants to donate his entire life savings to charity.  Good for you!
 
 Now the issue is where to donate that money.
 
-There are countless organizations that claim and do perform societal benefits but where can you put your money to help society the most?
+There are countless organizations that claim and do perform societal benefits but you want to put your money where it can have the most impact?
 
 Well currently with the data that is collected by non-profit organizations we are not at a place to determine where your dollar may be best utilized. But we may be in a position to determine a group of non-profit organization that you shouldn't donate to.
 
@@ -43,7 +44,9 @@ Fundraising Efficiency | Fundraising Income/Fundraising Expenses | Fudraising In
 
 A note on the features is that the middle three Deffered Expenses Ratio, Deferred Revenues Ratio, and Depreciation Rate are high indicators of accounting manipulation as they are high judgement accounts.
 
-After featurizing the data an Isolation Forest Model was applied (After considering a few models including an SVM Novelty Detection approach, and an elliptic envelope, Isolation Forest model seemed be the best approach).  Here is a link to the paper if you would like to learn more about the Isolation Forest Model.
+After featurizing the data an Isolation Forest Model was applied (After considering a few models including an SVM Novelty Detection approach, and an elliptic envelope, Isolation Forest model seemed be the best approach).  Here is a link to the paper if you would like to learn more about the Isolation Forest Model but essientially it is a random forest model looking to compute average the distance from the root node to the terminal node and using this as metric for abnormality (as shown in the diagram right below).
+
+![Isolation Forest Model](Isolation_Forest_Model.png)
 
 [Isolation-based Anomaly Detection](http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tkdd11.pdf)
 
@@ -78,7 +81,7 @@ Just based on these numbers its really hard to understand what is going on so le
 
 The first organization is paying its board members about 2.5 times the assets they hold.  They hold 30 times the liabilities compared to their assets.  Their solvency is negative so they had more expenses then revenue.  They are significantly deferring their expenses while not deferring any revenue. And they are also depreciating nearly all depreciable assets.  Just based on this information any person should be wary of donating to this organization.
 
-Another way of seeing we can see the results is via the following TSNE Display.  TSNE is a computationally powerful method for display Multidimensional data sets in two dimensions to identify clusters
+A better way of visualizing the results is via the following TSNE Display.  TSNE is a computationally powerful method for displaying multidimensional data sets in two dimensions to identify clusters
 
 ![TSNE Display](TSNE_Display.png)
 
